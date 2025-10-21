@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yy的旅行日志</title>
+    <link rel="stylesheet" href="./yy'blog.css">
+</head>
+<body>
+        <!-- 背景贴纸 -->
+    <div class="sticker sticker1"></div>
+    <div class="sticker sticker2"></div>
+    <div class="sticker sticker3"></div>
+    
+    <div class="sticker sticker5"></div>
+    <div class="sticker sticker6"></div>
+    <div class="sticker sticker7"></div>
+    <div class="sticker sticker8"></div>
+    <!-- 全屏图片查看器 -->
+    <div class="image-viewer" id="imageViewer">
+        <div class="viewer-container">
+            <button class="viewer-close" id="viewerClose">&times;</button>
+            <img class="viewer-image" id="viewerImage" src="" alt="全屏图片">
+            <button class="viewer-nav viewer-prev" id="viewerPrev">&#10094;</button>
+            <button class="viewer-nav viewer-next" id="viewerNext">&#10095;</button>
+        </div>
+        <div class="viewer-counter" id="viewerCounter">1 / 5</div>
+    </div>
+
+    <!-- 头部 -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h1>yy的旅行日志</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">旅行足迹</a></li>
+                    <li><a href="#">旅行攻略</a></li>
+                    <li><a href="#">摄影集</a></li>
+                    <li><a href="#">关于我</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="container">
+            <h2>打包一路的奇遇，收揽一筐的故事</h2>
+            <p>除了地理纬度，时间维度上的人和事物更让人着迷</p>
+        </div>
+    </section>
+
+     <!-- 主要内容 -->
+    <main class="container">
+        <div class="blog-grid">
+            <!-- 文章列表 -->
+            <div class="articles">
+                <!-- 西双版纳文章 -->
+                <article class="article-card">
+                    <div class="carousel" id="carousel1">
+                        <div class="carousel-inner">
+                            <div class="carousel-item" style="background-image: url('./img/西双版纳图片1.jpg');" data-src="./img/西双版纳图片1.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/西双版纳图片2.jpg');" data-src="./img/西双版纳图片2.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/西双版纳图片3.jpg');" data-src="./img/西双版纳图片3.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/西双版纳图片4.jpg');" data-src="./img/西双版纳图片4.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/西双版纳图片5.jpg');" data-src="./img/西双版纳图片5.jpg"></div>
+                        </div>
+                        <button class="carousel-control prev">&#10094;</button>
+                        <button class="carousel-control next">&#10095;</button>
+                        <div class="carousel-indicators">
+                            <span class="carousel-indicator active" data-index="0"></span>
+                            <span class="carousel-indicator" data-index="1"></span>
+                            <span class="carousel-indicator" data-index="2"></span>
+                            <span class="carousel-indicator" data-index="3"></span>
+                            <span class="carousel-indicator" data-index="4"></span>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h2><a href="#">西双版纳：热带雨林中的傣族风情</a></h2>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 2024年8月13日</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 中国，云南</span>
+                        </div>
+                        <p>西双版纳的热带雨林风光和独特的傣族文化令人着迷。在这里，我体验了热带植物园的奇妙、野象谷的惊喜和傣族园的民俗风情。</p>
+                        <div class="article-tags">
+                            <span class="tag">热带雨林</span>
+                            <span class="tag">傣族文化</span>
+                            <span class="tag">云南</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 日本文章 -->
+                <article class="article-card">
+                    <div class="carousel" id="carousel2">
+                        <div class="carousel-inner">
+                            <div class="carousel-item" style="background-image: url('./img/日本图片1.jpg');" data-src="./img/日本图片1.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/日本图片2.jpg');" data-src="./img/日本图片2.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/日本图片3.jpg');" data-src="./img/日本图片3.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/日本图片4.jpg');" data-src="./img/日本图片4.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/日本图片5.jpg');" data-src="./img/日本图片5.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/日本图片6.jpg');" data-src="./img/日本图片6.jpg"></div>
+                        </div>
+                        <button class="carousel-control prev">&#10094;</button>
+                        <button class="carousel-control next">&#10095;</button>
+                        <div class="carousel-indicators">
+                            <span class="carousel-indicator active" data-index="0"></span>
+                            <span class="carousel-indicator" data-index="1"></span>
+                            <span class="carousel-indicator" data-index="2"></span>
+                            <span class="carousel-indicator" data-index="3"></span>
+                            <span class="carousel-indicator" data-index="4"></span>
+                            <span class="carousel-indicator" data-index="5"></span>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h2><a href="#">日本京都：千年古都的文化漫步</a></h2>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 2024年4月21日</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 日本，京都</span>
+                        </div>
+                        <p>京都保留了日本传统文化的精髓，从古老的寺庙到精致的怀石料理，每一处都散发着独特的魅力。跟随我的脚步，探索这座古都隐藏的美丽角落...</p>
+                        <div class="article-tags">
+                            <span class="tag">日本</span>
+                            <span class="tag">文化</span>
+                            <span class="tag">古都</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 泰国文章 -->
+                <article class="article-card">
+                    <div class="carousel" id="carousel3">
+                        <div class="carousel-inner">
+                            <div class="carousel-item" style="background-image: url('./img/泰国图片1.jpg');" data-src="./img/泰国图片1.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/泰国图片2.jpg');" data-src="./img/泰国图片2.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/泰国图片3.jpg');" data-src="./img/泰国图片3.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/泰国图片4.jpg');" data-src="./img/泰国图片4.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/泰国图片5.jpg');" data-src="./img/泰国图片5.jpg"></div>
+                        </div>
+                        <button class="carousel-control prev">&#10094;</button>
+                        <button class="carousel-control next">&#10095;</button>
+                        <div class="carousel-indicators">
+                            <span class="carousel-indicator active" data-index="0"></span>
+                            <span class="carousel-indicator" data-index="1"></span>
+                            <span class="carousel-indicator" data-index="2"></span>
+                            <span class="carousel-indicator" data-index="3"></span>
+                            <span class="carousel-indicator" data-index="4"></span>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h2><a href="#">泰国清迈：古城寺庙与夜市美食</a></h2>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 2025年6月30日</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 泰国，清迈</span>
+                        </div>
+                        <p>清迈这座泰北古城融合了古老的寺庙文化和现代的生活气息。从素贴山到周末夜市，从泰式按摩到丛林飞跃，这里充满了令人难忘的体验。</p>
+                        <div class="article-tags">
+                            <span class="tag">泰国</span>
+                            <span class="tag">寺庙</span>
+                            <span class="tag">夜市</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 黄山文章 -->
+                <article class="article-card">
+                    <div class="carousel" id="carousel4">
+                        <div class="carousel-inner">
+                            <div class="carousel-item" style="background-image: url('./img/黄山图片1.jpg');" data-src="./img/黄山图片1.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/黄山图片2.jpg');" data-src="./img/黄山图片2.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/黄山图片3.jpg');" data-src="./img/黄山图片3.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/黄山图片4.jpg');" data-src="./img/黄山图片4.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/黄山图片5.jpg');" data-src="./img/黄山图片5.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/黄山图片6.jpg');" data-src="./img/黄山图片6.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/黄山图片7.jpg');" data-src="./img/黄山图片7.jpg"></div>
+                            <div class="carousel-item" style="background-image: url('./img/黄山图片8.jpg');" data-src="./img/黄山图片8.jpg"></div>
+                        </div>
+                        <button class="carousel-control prev">&#10094;</button>
+                        <button class="carousel-control next">&#10095;</button>
+                        <div class="carousel-indicators">
+                            <span class="carousel-indicator active" data-index="0"></span>
+                            <span class="carousel-indicator" data-index="1"></span>
+                            <span class="carousel-indicator" data-index="2"></span>
+                            <span class="carousel-indicator" data-index="3"></span>
+                            <span class="carousel-indicator" data-index="4"></span>
+                            <span class="carousel-indicator" data-index="5"></span>
+                            <span class="carousel-indicator" data-index="6"></span>
+                            <span class="carousel-indicator" data-index="7"></span>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <h2><a href="#">安徽黄山：奇松怪石与云海仙境</a></h2>
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar"></i> 2025年4月25日</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 中国，安徽</span>
+                        </div>
+                        <p>黄山以其"四绝"——奇松、怪石、云海、温泉闻名于世。这次登山之旅让我领略了黄山的壮丽景色，从迎客松到光明顶，从西海大峡谷到始信峰，每一步都是视觉的盛宴。</p>
+                        <div class="article-tags">
+                            <span class="tag">黄山</span>
+                            <span class="tag">登山</span>
+                            <span class="tag">云海</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <!-- 侧边栏 -->
+            <aside class="sidebar">
+                <div class="sidebar-widget about-me">
+                    <div class="avatar">
+                        <img src="./img/我的头像.jpg" alt="我的头像" class="avatar-img">
+                    </div>
+                    <h3 class="widget-title"><i class="fas fa-user-circle"></i> 关于我</h3>
+                    <p>热爱旅行和摄影的探索者，喜欢用文字和镜头记录旅途中的美好瞬间。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title"><i class="fas fa-map-marked-alt"></i> 旅行足迹</h3>
+                    <ul class="categories-list">
+                        <li><a href="#">浙江 <span>7</span></a></li>
+                        <li><a href="#">上海 <span>5</span></a></li>
+                        <li><a href="#">云南 <span>2</span></a></li>
+                        <li><a href="#">江苏 <span>2</span></a></li>
+                        <li><a href="#">安徽 <span>1</span></a></li>
+                        <li><a href="#">福建 <span>1</span></a></li>
+                        <li><a href="#">日本 <span>1</span></a></li>
+                        <li><a href="#">泰国 <span>1</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title"><i class="fas fa-heart"></i> 热门游记</h3>
+                    <ul class="popular-posts">
+                        <li><a href="#">西双版纳：热带雨林中的傣族风情</a></li>
+                        <li><a href="#">日本京都：千年古都的文化漫步</a></li>
+                        <li><a href="#">泰国清迈：古城寺庙与夜市美食</a></li>
+                        <li><a href="#">安徽黄山：奇松怪石与云海仙境</a></li>
+                        <li><a href="#">杭州西湖：江南水乡的诗意之旅</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title"><i class="fas fa-users"></i> 旅行搭子</h3>
+                    <div class="travel-buddies">
+                        <div class="buddies-tabs">
+                            <button class="buddy-tab active" data-tab="friends">朋友</button>
+                            <button class="buddy-tab" data-tab="family">家人</button>
+                        </div>
+                        <div class="buddies-content">
+                            <div class="buddy-photo friends active" data-src="./img/朋友合照.jpg"></div>
+                            <div class="buddy-photo family" data-src="./img/家人合照.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h3 class="widget-title"><i class="fas fa-camera"></i> 摄影器材</h3>
+                    <div class="camera-image">
+                        <img src="./img/相机照片.jpg" alt="我的相机" class="camera-img">
+                    </div>
+                    <p>主要使用NIKON D810相机，搭配50mm f/1.8和70-300mm f/4.5-5.6镜头。</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 相册部分 -->
+        <section class="photo-album-section">
+            <h2 class="section-title">摄影集</h2>
+            <div class="photo-album">
+                <div class="album-cover" id="albumCover">
+                    <i class="fas fa-images"></i>
+                    <h3>翻开相册</h3>
+                </div>
+                
+                <div class="album-pages" id="albumPages">
+                    <button class="album-close" id="albumClose">&times;</button>
+                    
+                    <!-- 第1页 -->
+                    <div class="album-page active" id="page1">
+                        <div class="album-photo" style="background-image: url('./img/相册1.jpg');" data-src="./img/相册1.jpg"></div>
+                        <div class="album-photo" style="background-image: url('./img/相册2.jpg');" data-src="./img/相册2.jpg"></div>
+                        <div class="album-photo" style="background-image: url('./img/相册3.jpg');" data-src="./img/相册3.jpg"></div>
+                        <div class="album-photo" style="background-image: url('./img/相册4.jpg');" data-src="./img/相册4.jpg"></div>
+                        <div class="album-photo" style="background-image: url('./img/相册5.jpg');" data-src="./img/相册5.jpg"></div>
+                        <div class="album-photo" style="background-image: url('./img/相册6.jpg');" data-src="./img/相册6.jpg"></div>
+                    </div>
+                    
+                    <!-- 第2页 -->
+                    <div class="album-page" id="page2">
+                        <div class="album-photo" style="background-image: url('./img/相册7.jpg');" data-src="./img/相册7.jpg"></div>
+                        <div class="album-photo" style="background-image: url('./img/相册8.jpg');" data-src="./img/相册8.jpg"></div>
+                        <div class="album-photo" style="background-image: url('./img/相册9.jpg');" data-src="./img/相册9.jpg"></div>
+                        <div class="album-photo" style="background-image: url('./img/相册10.jpg');" data-src="./img/相册10.jpg"></div>
+                        <div class="album-photo" style="background-image: url('./img/相册11.jpg');" data-src="./img/相册11.jpg"></div>
+                        <div class="album-photo" style="background-image: url('./img/相册12.jpg');" data-src="./img/相册12.jpg"></div>
+                    </div>
+                    
+                    <!-- 第3页 -->
+                    <div class="album-page" id="page3">
+                        <div class="album-photo" style="background-image: url('./img/相册13.jpg');" data-src="./img/相册13.jpg"></div>
+                        <div class="album-photo" style="background-image: url('./img/相册14.jpg');" data-src="./img/相册14.jpg"></div>
+                        <div class="album-photo" style="background-image: url('./img/相册15.jpg');" data-src="./img/相册15.jpg"></div>
+                        <div class="album-photo" style="background-image: url('./img/相册16.jpg');" data-src="./img/相册16.jpg"></div>
+                        <div class="album-photo" style="background-image: url('./img/相册17.jpg');" data-src="./img/相册17.jpg"></div>
+                        <div class="album-photo" style="background-image: url('./img/相册18.jpg');" data-src="./img/相册18.jpg"></div>
+                    </div>
+                </div>
+                
+                <div class="album-controls">
+                    <button class="album-nav" id="albumPrev" disabled>上一页</button>
+                    <div class="album-counter" id="albumCounter">1 / 3</div>
+                    <button class="album-nav" id="albumNext">下一页</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>关于博客</h3>
+                    <p>欢迎来到我的慢慢奇遇记</p>
+                    <p>我把路上的所见所闻、所知所感，都打包好放在这里了。希望能点燃你的旅行灵感，一起出发吧！</p>
+                </div>
+                <div class="footer-column">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">旅行足迹</a></li>
+                        <li><a href="#">旅行攻略</a></li>
+                        <li><a href="#">摄影集</a></li>
+                        <li><a href="#">关于我</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>联系我</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> 3490652662@qq.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 中国，浙江</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 我的旅行日志. 分享旅途中的美好瞬间</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 轮播图功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化所有轮播图
+            const carousels = document.querySelectorAll('.carousel');
+            
+            carousels.forEach(carousel => {
+                const inner = carousel.querySelector('.carousel-inner');
+                const items = carousel.querySelectorAll('.carousel-item');
+                const prevBtn = carousel.querySelector('.carousel-control.prev');
+                const nextBtn = carousel.querySelector('.carousel-control.next');
+                const indicators = carousel.querySelectorAll('.carousel-indicator');
+                
+                let currentIndex = 0;
+                const totalItems = items.length;
+                
+                // 更新轮播图状态
+                function updateCarousel() {
+                    inner.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    
+                    // 更新指示器状态
+                    indicators.forEach((indicator, index) => {
+                        if (index === currentIndex) {
+                            indicator.classList.add('active');
+                        } else {
+                            indicator.classList.remove('active');
+                        }
+                    });
+                }
+                
+                // 下一张
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % totalItems;
+                    updateCarousel();
+                }
+                
+                // 上一张
+                function prevSlide() {
+                    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+                    updateCarousel();
+                }
+                
+                // 绑定按钮事件
+                nextBtn.addEventListener('click', nextSlide);
+                prevBtn.addEventListener('click', prevSlide);
+                
+                // 绑定指示器事件
+                indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => {
+                        currentIndex = index;
+                        updateCarousel();
+                    });
+                });
+                
+                // 自动轮播（可选）
+                let autoPlay = setInterval(nextSlide, 5000);
+                
+                // 鼠标悬停时暂停自动轮播
+                carousel.addEventListener('mouseenter', () => {
+                    clearInterval(autoPlay);
+                });
+                
+                carousel.addEventListener('mouseleave', () => {
+                    autoPlay = setInterval(nextSlide, 5000);
+                });
+            });
+            
+            // 为文章卡片添加随机延迟动画
+            const cards = document.querySelectorAll('.article-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // 全屏图片查看器功能
+            const imageViewer = document.getElementById('imageViewer');
+            const viewerImage = document.getElementById('viewerImage');
+            const viewerClose = document.getElementById('viewerClose');
+            const viewerPrev = document.getElementById('viewerPrev');
+            const viewerNext = document.getElementById('viewerNext');
+            const viewerCounter = document.getElementById('viewerCounter');
+            
+            let currentCarousel = null;
+            let currentViewerIndex = 0;
+            let currentViewerItems = [];
+            
+            // 为所有轮播项添加点击事件
+            document.querySelectorAll('.carousel-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const carousel = this.closest('.carousel');
+                    const items = carousel.querySelectorAll('.carousel-item');
+                    
+                    // 获取当前轮播图的所有图片路径
+                    currentViewerItems = Array.from(items).map(item => item.getAttribute('data-src'));
+                    
+                    // 获取当前点击的图片索引
+                    currentViewerIndex = Array.from(items).indexOf(this);
+                    
+                    // 打开全屏查看器
+                    openImageViewer();
+                });
+            });
+            
+            // 打开全屏图片查看器
+            function openImageViewer() {
+                updateViewerImage();
+                imageViewer.classList.add('active');
+                document.body.style.overflow = 'hidden'; // 防止背景滚动
+            }
+            
+            // 关闭全屏图片查看器
+            function closeImageViewer() {
+                imageViewer.classList.remove('active');
+                document.body.style.overflow = ''; // 恢复背景滚动
+            }
+            
+            // 更新查看器中的图片
+            function updateViewerImage() {
+                viewerImage.src = currentViewerItems[currentViewerIndex];
+                viewerCounter.textContent = `${currentViewerIndex + 1} / ${currentViewerItems.length}`;
+            }
+            
+            // 查看上一张图片
+            function prevViewerImage() {
+                currentViewerIndex = (currentViewerIndex - 1 + currentViewerItems.length) % currentViewerItems.length;
+                updateViewerImage();
+            }
+            
+            // 查看下一张图片
+            function nextViewerImage() {
+                currentViewerIndex = (currentViewerIndex + 1) % currentViewerItems.length;
+                updateViewerImage();
+            }
+            
+            // 绑定查看器事件
+            viewerClose.addEventListener('click', closeImageViewer);
+            viewerPrev.addEventListener('click', prevViewerImage);
+            viewerNext.addEventListener('click', nextViewerImage);
+            
+            // 点击查看器背景关闭
+            imageViewer.addEventListener('click', function(e) {
+                if (e.target === imageViewer) {
+                    closeImageViewer();
+                }
+            });
+            
+            // 键盘导航
+            document.addEventListener('keydown', function(e) {
+                if (imageViewer.classList.contains('active')) {
+                    if (e.key === 'Escape') {
+                        closeImageViewer();
+                    } else if (e.key === 'ArrowLeft') {
+                        prevViewerImage();
+                    } else if (e.key === 'ArrowRight') {
+                        nextViewerImage();
+                    }
+                }
+            });
+            
+            // 旅行搭子选项卡功能
+            const buddyTabs = document.querySelectorAll('.buddy-tab');
+            const buddyPhotos = document.querySelectorAll('.buddy-photo');
+            
+            buddyTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabType = this.getAttribute('data-tab');
+                    
+                    // 更新选项卡状态
+                    buddyTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 更新照片显示
+                    buddyPhotos.forEach(photo => {
+                        photo.classList.remove('active');
+                        if (photo.classList.contains(tabType)) {
+                            photo.classList.add('active');
+                        }
+                    });
+                });
+            });
+            
+            // 旅行搭子照片点击全屏查看
+            buddyPhotos.forEach(photo => {
+                photo.addEventListener('click', function() {
+                    const photoSrc = this.getAttribute('data-src');
+                    viewerImage.src = photoSrc;
+                    viewerCounter.textContent = "1 / 1";
+                    imageViewer.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            // 相册功能
+            const albumCover = document.getElementById('albumCover');
+            const albumPages = document.getElementById('albumPages');
+            const albumClose = document.getElementById('albumClose');
+            const albumPrev = document.getElementById('albumPrev');
+            const albumNext = document.getElementById('albumNext');
+            const albumCounter = document.getElementById('albumCounter');
+            const albumPhotos = document.querySelectorAll('.album-photo');
+            
+            let currentPage = 1;
+            const totalPages = 3;
+            
+            // 打开相册
+            albumCover.addEventListener('click', function() {
+                albumCover.style.display = 'none';
+                albumPages.classList.add('active');
+                updateAlbumControls();
+                updateAlbumPages();
+            });
+            
+            // 关闭相册
+            albumClose.addEventListener('click', function() {
+                albumPages.classList.remove('active');
+                albumCover.style.display = 'flex';
+                currentPage = 1;
+                updateAlbumControls();
+                updateAlbumPages();
+            });
+            
+            // 上一页
+            albumPrev.addEventListener('click', function() {
+                if (currentPage > 1) {
+                    currentPage--;
+                    updateAlbumControls();
+                    updateAlbumPages();
+                }
+            });
+            
+            // 下一页
+            albumNext.addEventListener('click', function() {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    updateAlbumControls();
+                    updateAlbumPages();
+                }
+            });
+            
+            // 更新相册控制按钮状态
+            function updateAlbumControls() {
+                albumCounter.textContent = `${currentPage} / ${totalPages}`;
+                albumPrev.disabled = currentPage === 1;
+                albumNext.disabled = currentPage === totalPages;
+            }
+            
+            // 更新相册页面显示
+            function updateAlbumPages() {
+                document.querySelectorAll('.album-page').forEach(page => {
+                    page.classList.remove('active');
+                });
+                document.getElementById(`page${currentPage}`).classList.add('active');
+            }
+            
+            // 相册照片点击全屏查看
+            albumPhotos.forEach(photo => {
+                photo.addEventListener('click', function() {
+                    const photoSrc = this.getAttribute('data-src');
+                    viewerImage.src = photoSrc;
+                    viewerCounter.textContent = "1 / 1";
+                    imageViewer.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

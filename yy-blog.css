@@ -1,0 +1,997 @@
+/* 基础样式和变量 */
+        :root {
+            --primary-color: #e8f5e9;  /* 非常淡的绿色 */
+            --secondary-color: #c8e6c9; /* 稍深一点的淡绿色 */
+            --accent-color: #81c784;   /* 柔和的绿色，用于强调 */
+            --text-color: #2e3b37;     /* 深灰绿色文字 */
+            --text-light: #5a6b65;     /* 稍浅的文字颜色 */
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #ffffff;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* 背景贴纸样式 */
+        .sticker {
+            position: fixed;
+            z-index: -1;
+            opacity: 0.22;
+            pointer-events: none;
+        }
+
+        .sticker1 {
+            top: 10%;
+            left: 5%;
+            width: 150px;
+            height: 150px;
+            background: url('./img/1.png') no-repeat center center;
+            background-size: contain;
+            transform: rotate(-5deg);
+        }
+
+        .sticker2 {
+            top: 19%;
+            right: 7%;
+            width: 140px;
+            height: 140px;
+            background: url('./img/2.jpg') no-repeat center center;
+            background-size: contain;
+            transform: rotate(8deg);
+        }
+
+        .sticker3 {
+            bottom: 15%;
+            left: 8%;
+            width: 170px;
+            height: 170px;
+            background: url('./img/3.png') no-repeat center center;
+            background-size: contain;
+            transform: rotate(-12deg);
+        }
+
+        .sticker4 {
+            top: 25%;
+            left: 15%;
+            width: 100px;
+            height: 100px;
+            background: url('./img/4.jpg') no-repeat center center;
+            background-size: contain;
+            transform: rotate(15deg);
+        }
+
+        .sticker5 {
+            bottom: 20%;
+            right: 17%;
+            width: 130px;
+            height: 130px;
+            background: url('./img/5.jpg') no-repeat center center;
+            background-size: contain;
+            transform: rotate(-8deg);
+        }
+
+        .sticker6 {
+            top: 46%;
+            right: 4%;
+            width: 150px;
+            height: 150px;
+            background: url('./img/6.png') no-repeat center center;
+            background-size: contain;
+            transform: rotate(10deg);
+        }
+
+        .sticker7 {
+            bottom: 40%;
+            left: 3%;
+            width: 170px;
+            height: 170px;
+            background: url('./img/7.png') no-repeat center center;
+            background-size: contain;
+            transform: rotate(-15deg);
+        }
+
+        .sticker8 {
+            top: 45%;
+            left: 66%;
+            width: 110px;
+            height: 110px;
+            background: url('./img/8.jpg') no-repeat center center;
+            background-size: contain;
+            transform: rotate(5deg);
+        }
+
+         a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 头部样式 */
+        header {
+            background-color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-right: 0.5rem;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.8rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* 英雄区域 - 美化版 */
+        .hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M10,10 L90,10 L90,90 L10,90 Z" fill="none" stroke="%2381c784" stroke-width="0.5" stroke-dasharray="5,5"/></svg>');
+            background-size: 20px 20px;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #2e3b37 0%, #5a6b65 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            line-height: 1.3;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .hero h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #81c784, #4caf50);
+            border-radius: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 400;
+            line-height: 1.6;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            position: relative;
+            padding: 1.2rem;
+            background: rgba(232, 245, 233, 0.5);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            border-left: 3px solid var(--accent-color);
+        }
+
+        /* 主要内容区域 */
+        main {
+            padding: 2rem 0 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2.5rem;
+        }
+
+        /* 文章卡片样式 - 美化版 */
+        .article-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-bottom: 2.5rem;
+            border: 1px solid #f0f0f0;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        /* 轮播图样式 */
+        .carousel {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            background-color: var(--primary-color);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%;
+            width: 100%;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.3);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 10;
+            font-size: 18px;
+        }
+
+        .carousel-control:hover {
+            background: rgba(0,0,0,0.6);
+        }
+
+        .carousel-control.prev {
+            left: 15px;
+        }
+
+        .carousel-control.next {
+            right: 15px;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .carousel-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .carousel-indicator.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        .article-content {
+            padding: 1.8rem;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+        }
+
+        .article-meta i {
+            margin-right: 0.3rem;
+            font-size: 0.8rem;
+        }
+
+        .article-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .article-content p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .tag:hover {
+            background: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        /* 全屏图片查看器 */
+        .image-viewer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .image-viewer.active {
+            display: flex;
+        }
+
+        .viewer-container {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .viewer-image {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .viewer-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .viewer-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.5rem;
+        }
+
+        .viewer-nav:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .viewer-prev {
+            left: 20px;
+        }
+
+        .viewer-next {
+            right: 20px;
+        }
+
+        .viewer-counter {
+            color: white;
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* 侧边栏样式 */
+        .sidebar-widget {
+            background: white;
+            border-radius: 8px;
+            padding: 1.8rem;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid #f0f0f0;
+        }
+
+        .widget-title {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid var(--primary-color);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .widget-title i {
+            margin-right: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        .about-me {
+            text-align: center;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1.2rem;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-color);
+            font-size: 2rem;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--primary-color);
+            overflow: hidden;
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--accent-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .categories-list, .popular-posts {
+            list-style: none;
+        }
+
+        .categories-list li, .popular-posts li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f5f5f5;
+            transition: var(--transition);
+        }
+
+        .categories-list li:hover, .popular-posts li:hover {
+            background-color: var(--primary-color);
+            padding-left: 0.5rem;
+        }
+
+        .categories-list li:last-child, .popular-posts li:last-child {
+            border-bottom: none;
+        }
+
+        .categories-list a, .popular-posts a {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .categories-list span {
+            background: var(--primary-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+
+        /* 相机样式 */
+        .camera-image {
+            width: 100%;
+            height: 150px;
+            background-color: var(--primary-color);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .camera-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 旅行搭子样式 */
+        .travel-buddies {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .buddies-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .buddy-tab {
+            flex: 1;
+            padding: 0.7rem 0.5rem;
+            background: var(--primary-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        .buddy-tab.active {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .buddy-tab:hover:not(.active) {
+            background: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .buddies-content {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .buddy-photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            cursor: pointer;
+        }
+
+        .buddy-photo.active {
+            opacity: 1;
+        }
+
+        .buddy-photo.friends {
+            background-image: url('./img/朋友合照.jpg');
+        }
+
+        .buddy-photo.family {
+            background-image: url('./img/家人合照.jpg');
+        }
+
+        /* 相册样式 */
+        .photo-album-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--primary-color);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--text-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        .photo-album {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid #f0f0f0;
+            position: relative;
+        }
+
+        .album-cover {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .album-cover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .album-cover i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .album-cover h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .album-pages {
+            display: none;
+            position: relative;
+            min-height: 500px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: #f9f9f9;
+            margin-bottom: 1rem;
+        }
+
+        .album-pages.active {
+            display: block;
+        }
+
+        .album-page {
+            display: none;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 15px;
+            padding: 20px;
+            background: white;
+            transition: transform 0.8s ease;
+            min-height: 450px;
+        }
+
+        .album-page.active {
+            display: grid;
+        }
+
+        .album-photo {
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            min-height: 180px;
+        }
+
+        .album-photo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .album-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .album-nav {
+            background: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .album-nav:hover:not(:disabled) {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .album-nav:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .album-counter {
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        .album-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+        }
+
+        .album-close:hover {
+            background: rgba(0,0,0,0.9);
+        }
+
+        /* 页脚样式 */
+        footer {
+            background: var(--primary-color);
+            padding: 3rem 0 1.5rem;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: var(--accent-color);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--text-color);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--secondary-color);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .nav-links {
+                margin-top: 1.5rem;
+                justify-content: center;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .sticker {
+                display: none; /* 在小屏幕上隐藏贴纸 */
+            }
+            
+            .viewer-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .viewer-prev {
+                left: 10px;
+            }
+            
+            .viewer-next {
+                right: 10px;
+            }
+            
+            .album-page {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .hero {
+                padding: 3rem 0;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .carousel {
+                height: 250px;
+            }
+            
+            .buddies-tabs {
+                flex-direction: column;
+            }
+            
+            .buddies-content {
+                height: 180px;
+            }
+            
+            .album-page {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6, 1fr);
+            }
+            
+            .album-pages {
+                min-height: 600px;
+            }
+        }
